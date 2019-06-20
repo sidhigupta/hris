@@ -1,34 +1,55 @@
+const path = require('path');
+const fs = require('fs');
+const express = require('express');
+const multer = require('multer');
+const bodyParser = require('body-parser')
+const app = express();
+const router = express.Router();
 
-// ================================================================
-// get all the tools we need
-// ================================================================
-var express = require('express');
-var routes = require('./routes/index.js');
-nodeMailer = require('nodemailer');
-var fs = require('fs');
-
-var port = process.env.PORT || 2000;
-var app = express();
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+const DIR = './uploads';
+ 
+let storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, DIR);
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.fieldname + '-' + Date.now() + '.' + path.extname(file.originalname));
+    }
+});
+let upload = multer({storage: storage});
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static('public'))
-// ================================================================
-// setup our express application
-// ================================================================
-//app.use('/public', express.static(process.cwd() + '/public'));
-app.set('view engine', 'ejs');
-// ================================================================
-// setup routes
-// ================================================================
-routes(app);
-// ================================================================
-// start our server
-// ================================================================
-app.listen(port, function() {
-	console.log('Server listening on port ' + port + '…');
+app.use(bodyParser.urlencoded({extended: true}));
+ 
+app.use(function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+  res.setHeader('Access-Control-Allow-Methods', 'POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
 });
-
-
+ 
+app.get('/api', function (req, res) {
+  res.end('file catcher example');
+});
+ 
+app.post('/api/upload',upload.single('photo'), function (req, res) {
+    if (!req.file) {
+        console.log("No file received");
+        return res.send({
+          success: false
+        });
+    
+      } else {
+        console.log('file received');
+        return res.send({
+          success: true
+        })
+      }
+});
+ 
+const PORT = process.env.PORT || 2000;
+ 
+app.listen(PORT, function () {
+  console.log('Node.js server is running on port ' + PORT);
+});
