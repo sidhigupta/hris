@@ -1,0 +1,80 @@
+<div class="content-wrapper">
+    <section class="content-header">
+      <h1>Bulk User <small>it all starts here</small></h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">User</a></li>
+        <li class="active">Bulk User</li>
+      </ol>
+    </section>
+    <section class="content">
+          <div class="col-md-6">
+              <form action="/file_upload" method="POST"  enctype = "multipart/form-data" autocomplete="off">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="text-normal text-dark">First Name</label>
+                        <input type="text" class="form-control" placeholder="first name" name="firstname" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-normal text-dark">last Name</label>
+                        <input type="text" class="form-control" placeholder="last name" name="lastname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-normal text-dark">Location</label>
+                        <input type="text" class="form-control" placeholder="location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-normal text-dark">Age</label>
+                        <input type="text" class="form-control" placeholder="age" name="age" maxlength="2" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-normal text-dark">Image</label>
+                        <input type="file" class="form-control" name="myFile" >
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary" id="btn_add" name="btn_add">Submit</button>
+                    </div>
+                </div>
+              </form>
+          </div>  
+          <div class="col-md-6" >
+              <% var str = JSON.stringify(data) %>
+              <table class="table table-striped">
+                  <tr>
+                      <th>Id</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Email</th>
+                      <th>Location</th>
+                      <th>Age</th>
+                       <!-- <th>Image</th>  -->
+                      <th>Action</th>
+                  </tr>
+                  <% Object.keys(data[0]).forEach(function(key){
+                         
+                      %>
+                      <tr>
+                          <td><%= data[0][key]['id'] %></td>
+                          <td><%= data[0][key]['first_name'] %></td>
+                          <td><%= data[0][key]['last_name'] %></td>
+                          <td><%= data[0][key]['email'] %></td>
+                          <td><%= data[0][key]['location'] %></td>
+                          <td><%= data[0][key]['age'] %></td>
+                          <!-- <td><img class="logo" src="/public/uploads/<%=data[0][key]['finalImg']%>" alt="My_Logo"></td> -->
+                            <td>
+                                    <a class="btn btn-warning" href='/user/edit/<%= data[0][key]['id'] %>'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> &nbsp;                            
+  
+                                    <form method="post" action="/user_bulk/delete/<%= data[0][key]['id'] %>" style="float:right">
+                                        <input type="submit" class="btn btn-danger" name="delete" value='Delete' onClick="return confirm('Are you sure you want to delete?')" />
+                                        <input type="hidden" name="_method" value="DELETE" />
+                                    </form> 
+                            </td>
+                        </tr>
+                  <% }); %>
+              </table>
+          </div>  
+        </section>
+  </div>
+  
+    <!-- /.content-wrapper -->

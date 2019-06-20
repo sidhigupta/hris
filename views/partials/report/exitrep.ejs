@@ -1,0 +1,109 @@
+<div class="content-wrapper">
+        <section class="content-header">
+          <h1>Exit Report <small>it all starts here</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">User</a></li>
+            <li class="active">Exit Report</li>
+          </ol>
+        </section>
+        <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align: center">Exit Report</div>
+                <!-- <div class="panel-body">Panel Content</div> -->
+              </div>
+        <section class="content">
+            <form method="POST" action="/exitrep" autocomplete="off">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class='col-sm-3'>
+                            <label>Start date</label>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker2'>
+                                    <input type='text' class="form-control" name="start_date" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-sm-3'>
+                                <label>End date</label>
+                                <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" name="end_date"/>
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar" ></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                        </div>
+                            <div class="col-md-3"></div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 align-items-center">
+                            <div class="form-group">
+                                    <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section>
+                <div class="col-md-12">
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>S.no</th>
+                                <th>Emp Id</th>
+                                <th>Function</th>
+                                <th>Process</th>
+                                <th>Notice</th>
+                                <th>reason</th>
+                                <th>Date Of leaving</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% Object.keys(data).forEach(function(key) { var row = data[key];%>
+                            <tr>
+                                    <td><%= row.id %></td>
+                                    <td><%= row.emp_id %></td>
+                                    <td><%= row.function %></td>
+                                    <td><%= row.process %></td>
+                                    <td><%= row.notice %></td>
+                                    <td><%= row.reason %></td> 
+                                    <td><%= row.exit_date %></td>
+                                       
+                            </tr>
+                            <% }); %>
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>
+        </section>
+    </div>
+      
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datepicker({
+                format: "yyyy-mm-dd",
+                language: "es",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+        $(function () {
+            $('#datetimepicker2').datepicker({
+                format: "yyyy-mm-dd",
+                language: "es",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+    </script>

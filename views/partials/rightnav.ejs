@@ -1,0 +1,107 @@
+<script>
+    var pathname = window.location.pathname;
+    if(pathname === 'feedback'){
+        $('.nav > li > a[href="'+pathname+'"]').parent().addClass('active');
+    }
+</script>
+<aside class="main-sidebar">
+    <section class="sidebar">
+      	<div class="user-panel">
+        	<div class="pull-left image">
+          		<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        	</div>
+        	<div class="pull-left info">
+          		<p>sidhi gupta</p>
+          		<a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        	</div>
+      	</div>      	
+      	<ul class="sidebar-menu nav" data-widget="tree">
+        	<li class="header">MAIN NAVIGATION</li>
+        		<li <% if(path == 'dashboard'){ %> class="active" <% } %>><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                <li <% if(path == 'feedback'){ %> class="active" <% } %>><a href="feedback" ><i class="fa fa-bell"></i> <span>Notification</span></a></li>
+                <!-- User module -->
+                    <li <% if(path == 'user'){ %> class="treeview active menu-open" <% }else{ %> class="treeview" <% } %>>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span>User</span>  
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>                     
+                        </a>
+                        <ul class="treeview-menu">
+                            <li <% if(open == 'newjoinee'){ %> class="active" <% } %>><a href="newjoinee"><i class="fa fa-circle-o"></i> New Joinee HR Form</a></li>
+                            <li <% if(open == 'updateuser'){ %> class="active" <% } %>><a href="updateuser"><i class="fa fa-circle-o"></i> Update User Details</a></li>
+                            <li <% if(open == 'user_bulk'){ %> class="active" <% } %>><a href="user_bulk"><i class="fa fa-circle-o"></i> Bulk Update User Details</a></li>
+                            <li <% if(open == 'sendmail'){ %> class="active" <% } %>><a href="sendmailalert_nj"><i class="fa fa-circle-o"></i> New Joinee Mail Alert</a></li>                        
+                        </ul>
+                    </li>
+                <!-- End User Module -->
+
+                <!-- Report module -->
+            		<li <% if(path == 'report'){ %> class="treeview active menu-open" <% }else{ %> class="treeview" <% } %>>
+              			<a href="#">
+                			<i class="fa fa-files-o"></i>
+                			<span>Report</span>  
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>          			
+              			</a>
+              			<ul class="treeview-menu">
+                			<li <% if(open == 'newjoineerep'){ %> class="active" <% } %>><a href="newjoineerep"><i class="fa fa-circle-o"></i> New Joinee</a></li>
+                			<li <% if(open == 'processwiseallocrep'){ %> class="active" <% } %>><a href="processwiseallocrep"><i class="fa fa-circle-o"></i> Process Wise Allocation</a></li>
+                			<li <% if(open == 'hrisrep'){ %> class="active" <% } %>><a href="hrisrep"><i class="fa fa-circle-o"></i> HRIS</a></li>
+                            <li <% if(open == 'exitwiserep'){ %> class="active" <% } %>><a href="exitwiserep"><i class="fa fa-circle-o"></i> Exit</a></li>
+                            <li <% if(open == 'attritionrep'){ %> class="active" <% } %>><a href="attritionrep"><i class="fa fa-circle-o"></i> Attrition Percentage</a></li>
+                			<li <% if(open == 'foreignrep'){ %> class="active" <% } %>><a href="foreignrep"><i class="fa fa-circle-o"></i> Contractual Resources</a></li>
+                            <li <% if(open == 'movewiserep'){ %> class="active" <% } %>><a href="movewiserep"><i class="fa fa-circle-o"></i> Movement Tracking</a></li>
+                            <li <% if(open == 'usermoverep'){ %> class="active" <% } %>><a href="usermoverep"><i class="fa fa-circle-o"></i> User Movement History</a></li>                        
+                            <li <% if(open == 'warningrep'){ %> class="active" <% } %>>><a href="warningrep"><i class="fa fa-circle-o"></i> Warning</a></li>
+              			</ul>
+            		</li>
+                <!-- End Report Module -->
+
+                <!-- Movement -->
+            		<li <% if(path == 'movetracker'){ %> class="active" <% } %>>
+              			<a href="movetracker">
+                			<i class="fa fa-arrows"></i> <span>Internal Movement Form</span>
+                		</a>
+            		</li>
+                <!-- End Movement -->
+
+                <!-- Hiring -->
+            		<li <% if(path == 'hirereq'){ %> class="treeview active menu-open" <% }else{ %> class="treeview" <% } %>>
+              			<a href="#">
+                			<i class="fa fa-users"></i>
+                			<span>Hiring</span>
+                			<span class="pull-right-container">
+                  				<i class="fa fa-angle-left pull-right"></i>
+                			</span>
+              			</a>
+              			<ul class="treeview-menu">
+                			<li <% if(open == 'hire'){ %> class="active" <% } %>><a href="hire"><i class="fa fa-circle-o"></i> Hiring Requisition Form</a></li>
+                			<li <% if(open == 'hireview'){ %> class="active" <% } %>><a href="hireview"><i class="fa fa-circle-o"></i> Hiring Requisition View</a></li>            			
+              			</ul>
+            		</li>
+                <!-- End Hiring -->
+                
+                <!-- Admin Function -->
+        		<li <% if(path == 'admin'){ %> class="treeview active menu-open" <% }else{ %> class="treeview" <% } %>>
+          			<a href="#">
+            			<i class="fa fa-laptop"></i>
+            			<span>Admin Function</span>
+            			<span class="pull-right-container">
+              				<i class="fa fa-angle-left pull-right"></i>
+            			</span>
+          			</a>
+          			<ul class="treeview-menu">
+            			<li <% if(open == 'function'){ %> class="active" <% } %>><a href="function"><i class="fa fa-circle-o"></i> Add Function</a></li>
+                        <li <% if(open == 'sfunction'){ %> class="active" <% } %>><a href="sfunction"><i class="fa fa-circle-o"></i> Add Sub Function</a></li>
+                        <li <% if(open == 'process'){ %> class="active" <% } %>><a href="process"><i class="fa fa-circle-o"></i> Add Process</a></li>
+                        <li <% if(open == 'role'){ %> class="active" <% } %>><a href="role"><i class="fa fa-circle-o"></i> Add Role</a></li>
+                        <li <% if(open == 'designation'){ %> class="active" <% } %>><a href="designation"><i class="fa fa-circle-o"></i> Add Designation</a></li>                       
+          			</ul>
+        		</li>
+                <!-- End Admin Function -->
+      	 </ul>
+    </section>    
+</aside>

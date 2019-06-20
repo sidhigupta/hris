@@ -1,0 +1,43 @@
+<div class="content-wrapper">
+        <section class="content-header">
+          <h1>Edit User <small>it all starts here</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">User</a></li>
+            <li class="active">Edit User</li>
+          </ol>
+        </section>
+        <section class="content">
+            
+              <div class="col-md-12">
+                  <form action="/user/edit/2" method="POST"  >
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="text-normal text-dark">First Name</label>
+                            <input type="text" class="form-control" placeholder="first name" name="firstname" value="  Sidhi" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-normal text-dark">last Name</label>
+                            <input type="text" class="form-control" placeholder="last name" name="lastname" value=" Gupta" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="text-normal text-dark">Location</label>
+                            <input type="text" class="form-control" placeholder="location" name="location" value=" Agra"  required>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-normal text-dark">Age</label>
+                            <input type="text" class="form-control" placeholder="age" name="age" value="25" required>
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn-Warning" id="btn_add" name="btn_add">Edit</button>
+                          <input type="hidden" name="_method" value="PUT" />
+                        </div>
+                    </div>
+                  </form>
+              </div>  
+              
+            </section>
+      </div>
+      
+        <!-- /.content-wrapper -->

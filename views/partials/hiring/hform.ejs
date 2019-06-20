@@ -1,0 +1,592 @@
+<div class="content-wrapper">
+    <section class="content-header">
+      <h1>Hiring Requisition Form
+        <small>it all starts here</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">User</a></li>
+        <li class="active">Hiring Requisition Form</li>
+      </ol>
+    </section>
+    <div class="panel panel-primary">
+        <div class="panel-heading" style="text-align: center">Hiring Requisition Form</div>
+        <!-- <div class="panel-body">Panel Content</div> -->
+    </div>
+    <!-- Main content -->
+    <section class="content">
+        <form action="/hform_submit" method="POST">
+        <!-- personal details -->
+        <div class="box box-default">
+            <div class="box-header with-border">
+                <h3 class="box-title" style="text-align: center">Candidate Details</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            
+            <div class="box-body">
+                <div class="row">
+                    <div class="row"> 
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>For Function</label>
+                                    <select class="form-control valid" name="fname" id="fname" style="width:220px;height: auto!important;" required="" aria-required="true" aria-invalid="false">
+                                        <option value="Innovation &amp; Strategy">Innovation &amp; Strategy</option>
+                                        <option value="Professional Services">Professional Services</option>
+                                        <option value="MKSmartSpeech">MKSmartSpeech</option>
+                                        <option value="Nexidia">Nexidia</option>
+                                        <option value="Analytics Group">Analytics Group</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Ecom Genie">Ecom Genie</option>
+                                        <option value="NICE-APAC">NICE-APAC</option></select>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>For Sub-Function</label>
+                                    <select class="form-control" name="sfname" id="sfname" style="width:220px;height: auto!important;" required="" aria-required="true">
+                                        <option value="">select</option>
+                                        <option value="Innovation &amp; Strategy">Innovation &amp; Strategy</option>
+                                        <option value="Professional Services">Professional Services</option>
+                                        <option value="MKSmartSpeech">MKSmartSpeech</option>
+                                        <option value="Nexidia">Nexidia</option>
+                                        <option value="Analytics Group">Analytics Group</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Ecom Genie">Ecom Genie</option>
+                                        <option value="NICE-APAC">NICE-APAC</option></select>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                    </div> 
+                    <div class="row"> 
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>For Process</label>
+                                <select class="form-control" name="pname" id="pname" style="width:220px;height: auto!important;" required="" aria-required="true">
+                                        <option value="Innovation &amp; Strategy">Innovation &amp; Strategy</option>
+                                        <option value="Professional Services">Professional Services</option>
+                                        <option value="MKSmartSpeech">MKSmartSpeech</option>
+                                        <option value="Nexidia">Nexidia</option>
+                                        <option value="Analytics Group">Analytics Group</option>
+                                        <option value="Marketing">Marketing</option>
+                                        <option value="Ecom Genie">Ecom Genie</option>
+                                        <option value="NICE-APAC">NICE-APAC</option></select>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>For Designation</label>
+                                <input class="form-control error" name="desig" id="desig" type="text" style="width:220px;height: auto!important;" required="" aria-required="true" aria-invalid="true">
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div> 
+                    <div class="row">     
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>For Role/Level</label>
+                                    <select class="form-control" name="rname" id="rname" style="width:220px;height: auto!important;" required="" aria-required="true">
+                                        <option value="">select</option>
+                                        <option value="AM">AM</option>
+                                        <option value="AVP">AVP</option>
+                                        <option value="Exe">Exe</option>
+                                        <option value="Group Mgr">Group Mgr</option>
+                                        <option value="Mgr">Mgr</option>
+                                        <option value="Shift Supervisor">Shift Supervisor</option>
+                                        <option value="Sr. Exe">Sr. Exe</option>
+                                        <option value="Sr. Mgr">Sr. Mgr</option>
+                                        <option value="Sr. TL">Sr. TL</option>
+                                        <option value="Sr. VP">Sr. VP</option>
+                                        <option value="TL">TL</option>
+                                        <option value="Trainee">Trainee</option>
+                                        <option value="TTL-CS">TTL-CS</option>
+                                        <option value="VP">VP</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span># Resource to be Hired</label>
+                                    <select class="form-control valid" name="reshire" id="reshire" style="width:220px;height: auto!important;" required="" aria-required="true" aria-invalid="false">
+                                        <option value="">select</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>            
+                    </div> 
+                    <div class="row">          
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Desired Skill Set</label>
+                                <select class="form-control" name="skill" id="skill" style="width:220px;height: auto!important;" required="" aria-required="true">
+                                    <option value="">select</option>
+                                    <option value="Technical">Technical</option>
+                                    <option value="Non-Technical">Non-Technical</option>
+                                    <option value="Semi-Technical">Semi-Technical</option>
+                                    <option value="NA">NA</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Desired Foreign Language Known</label>
+                                <select class="form-control" name="forlang[]" id="forlang" multiple="multiple" style="width: 220px;height: auto!important; ">
+                                        <option value="Spanish">Spanish</option>
+                                        <option value="French">French</option>
+                                        <option value="French Tech">French Tech</option>
+                                        <option value="Mandarin">Mandarin</option>
+                                        <option value="Tagalog">Tagalog</option>
+                                        <option value="Vietnamese">Vietnamese</option>
+                                        <option value="Korean">Korean</option>
+                                        <option value="Japanese">Japanese</option>
+                                        <option value="Cantonese">Cantonese</option>
+                                        <option value="Italian">Italian</option>
+                                        <option value="Dutch">Dutch</option>
+                                        <option value="Portugese">Portugese</option>
+                                        <option value="Thai">Thai</option>
+                                        <option value="German">German</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div> 
+                    <div class="row">     
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Expected Shift Timing</label>
+                                <select class="form-control" name="shift" id="shift" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">select</option>
+                                    <option value="08:00 AM - 05:00 AM">Morning (08:00 AM - 05:00 AM)</option>
+                                    <option value="12:30 PM - 09:30 PM ">AfterNoon (12:30 PM - 09:30 PM) </option>
+                                    <option value="05:00 PM - 02:00 AM">Evening (05:00 PM - 02:00 AM)</option>
+                                    <option value="10:30 PM - 07:30 AM ">Night(10:30 PM - 07:30 AM)</option>
+                                    <option value="Others">Others</option>							
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Required Scholastic Qualification</label>
+                                <select class="form-control" name="edu1" id="edu1" style="width:220px;height: auto!important;" required="" aria-required="true">
+                                    <option value="">select</option>
+                                    <option value="Graduate">Graduate</option>
+                                    <option value="Post Graduate">Post Graduate</option>
+                                    <option value="NA">NA</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>  
+                    </div> 
+                    <div class="row">      
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Required Professional Qualification</label>
+                                <select class="form-control" name="prof" id="prof" style="width:220px;height: auto!important;">
+                                        <option value="">select</option>
+                                        <option value="Green Belt">Green Belt</option>
+                                        <option value="Black Belt">Black Belt</option>
+                                        <option value="CA">CA</option>
+                                        <option value="Others">Others</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Required years of experience</label>
+                                <input class="form-control" type="text" name="exp" id="exp" placeholder=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div> 
+                    </div>                 
+                </div>                
+            </div>                       
+            <!-- End personal details --> 
+
+            <!-- Address Details -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">MK Details</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                    </div>
+                </div>            
+                <!-- /.box-header -->
+                <!-- Current Address -->
+                    <div class="box-body">
+                        
+                        <div class="row">
+                            <div class="col-md-2"></div> 
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>Requestor's Name</label>
+                                    <input class="form-control" name="req_name" id="req_name" type="text" style="width:220px;" required="" aria-required="true">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label ><span class="must" style="color: red">*</span>Candidate's Reporting Supervisor Name</label>
+                                    <input class="form-control" name="sup_name" id="sup_name" type="text" style="width:220px;" required="" aria-required="true">
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-2"></div> 
+                        </div> 
+                        <div class="row">     
+                            <div class="col-md-2"></div> 
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>Approved By</label>
+                                    <select class="form-control" name="aprooved_by" id="aprooved_by" style="width:220px;height: auto!important;" required="" aria-required="true">
+                                            <option value="">select</option>
+                                            <option value="Mike Mattsen">Mike Mattsen</option>
+                                            <option value="Aarati Kumar">Aarati Kumar</option>
+                                            <option value="Sonali Banerjee">Sonali Banerjee</option>
+                                            <option value="Gaurav Rai">Gaurav Rai</option>
+                                            <option value="Rahul Sharma">Rahul Sharma</option>
+                                            <option value="Sudipto Chatterjee">Sudipto Chatterjee</option>
+                                            <option value="Tapashya Subba">Tapashya Subba</option>
+                                            <option value="Vivek Anand">Vivek Anand</option>
+                                            <option value="Rudraksh Singh Parmar">Rudraksh Singh Parmar</option>
+                                            <option value="Siddharth Gupta">Siddharth Gupta</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label ><span class="must" style="color: red">*</span>Requisition Date</label>
+                                    <input class="form-control datepicker2 hasDatepicker" name="req_date" id="req_date" type="text" style="width:220px;height: auto!important;" required="" autocomplete="off" aria-required="true">
+                                </div>  
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div> 
+                        <div class="row">      
+                            <div class="col-md-2"></div> 
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>Target DOJ</label>
+                                    <input class="form-control datepicker3 hasDatepicker" name="tar_date" id="tar_date" type="text" style="width:220px;height: auto!important;" required="" autocomplete="off" aria-required="true">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label ><span class="must" style="color: red">*</span>Requisition Type</label>
+                                    <select class="form-control" name="req_type" id="req_type" style="width:220px;height: auto!important;" required="" onchange="backfill();" aria-required="true">
+                                            <option value="">select</option>
+                                            <option value="New- Ramp Up">New- Ramp Up</option>
+                                            <option value="New- New Business">New- New Business</option>
+                                            <option value="Backfill- Attrition">Backfill- Attrition</option>
+                                            <option value="Backfill- Promotion">Backfill- Promotion</option>
+                                            
+                                    </select>
+                                </div>  
+                            </div>
+                            <div class="col-md-2"></div> 
+                        </div> 
+                        <div class="row">      
+                            <div class="col-md-2"></div> 
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>Pre Employment Verification Required</label>
+                                    <select class="form-control" name="pre_verify" id="pre_verify" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">select</option><option value="Yes">Yes</option><option value="No">No</option><option value="NA">NA</option></select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label ><span class="must" style="color: red">*</span>If Required, Billable on client or HQ</label>
+                                    <select class="form-control valid" name="bill_hq" id="bill_hq" style="width:220px;height: auto!important;" required="" aria-required="true" aria-invalid="false"><option value="NA">NA</option><option value="MK">MK</option><option value="HQ/Spoken">HQ/Spoken</option></select>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>  
+                        </div> 
+                        <div class="row">     
+                            <div class="col-md-2"></div> 
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>Verification Type</label>
+                                    <select name="verify_type[]" id="verify_type" multiple="multiple" style="width: 220px;" required="" aria-required="true">
+                                            <option value="Previous Employment Verification">Previous Employment Verification</option>
+                                            <option value="Professional Reference Check (Level I)">Professional Reference Check (Level I)</option>
+                                            <option value="Personal Reference / Character Check">Personal Reference / Character Check</option>
+                                            <option value="Education Verification">Education Verification</option>
+                                            <option value="Address Verification">Address Verification</option>
+                                            <option value="Indian Criminal Record">Indian Criminal Record</option>
+                                            <option value="Verification through Police Authorities (Verbal)">Verification through Police Authorities (Verbal)</option>
+                                            <option value="Indian Court Record check (database)">Indian Court Record check (database)</option>
+                                            <option value="Indian Court Record check (law firm certified)">Indian Court Record check (law firm certified)</option>
+                                            <option value="India Regulatory Authorities Database Check">India Regulatory Authorities Database Check</option>
+                                            <option value="India Credit and Integrity Risk">India Credit and Integrity Risk</option>
+                                            <option value="Company Verification">Company Verification</option>
+                                            
+                                            <option value="India Regulatory Authorities Database Check">Drug Test </option>
+                                            <option value="India National Identity Check">India National Identity Check</option>
+                                        </select>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label ><span class="must" style="color: red">*</span>Position Cost [ Gross Per Annum INR]</label>
+                                    <input class="form-control" name="pos_cost" id="pos_cost" type="text" style="width:220px;" required="" aria-required="true">
+                                </div> 
+                            </div>
+                            <div class="col-md-2"></div>                           
+                        </div>                
+                    </div>                       
+                <!-- End Current Address -->
+                         
+            </div>
+            <!-- End Address Details -->
+
+            <!-- Qualification details -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Interview Procedures</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>HR Round</label>
+                                <input class="form-control valid" name="hrround" id="hrround" type="text" value="Yes" style="width:220px;height: auto!important;" required="" readonly="" aria-required="true" aria-invalid="false">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Telephonic interview (Before F2F)</label>
+                                <input class="form-control" type="text" name="teleint" id="teleint" placeholder=""/>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div> 
+                    <div class="row">     
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Written Test</label>
+                                <select class="form-control" name="written" id="written" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">select</option><option value="Yes">Yes</option><option value="No">No</option><option value="NA">NA</option></select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Line Manager Round</label>
+                                <select class="form-control" name="linemanr" id="linemanr" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">select</option><option value="Yes">Yes</option><option value="No">No</option><option value="NA">NA</option></select>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div> 
+                    <div class="row">      
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>HOD Round</label>
+                                <select class="form-control" name="hodr" id="hodr" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">select</option><option value="Yes">Yes</option><option value="No">No</option><option value="NA">NA</option></select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Line Manager Round</label>
+                                <select class="form-control" name="clientr" id="clientr" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">select</option><option value="Yes">Yes</option><option value="No">No</option><option value="NA">NA</option></select>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div> 
+                    <div class="row">     
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>*Please confirm the Panel For Line Round</label>
+                                <input class="form-control" name="panel1" id="panel1" type="text" style="width:220px;" required="" aria-required="true">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label><span class="must" style="color: red">*</span>Please attach the approval Mail (Only Outlook Email Allowed)</label>
+                                <input class="form-control" name="mail_file[]" id="mail_file" type="file" accept=".msg" multiple="" style="width:220px;padding: 4px 0 0 4px;" required="" aria-required="true">
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>     
+                        <div class="row">   
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>*Please attach the JD (MS Word or PDF Files are Allowed)</label>
+                                    <input class="form-control" name="jd_file" id="jd_file" type="file" accept=".doc, .docx, .pdf" style="width:220px;padding: 4px 0 0 4px;">
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label><span class="must" style="color: red">*</span>Any Specific requirement which is not highlighted in standard/attached JD.</label>
+                                    <textarea class="form-control" name="jd_text" id="jd_text" type="text" style="width:220px;resize:none;" rows="3" required="" aria-required="true"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div> 
+                        <div class="row"> 
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <div class="col-md-6 form-group">
+                                        <label><span class="must" style="color: red">*</span>*DL Email List  (Please select an email)</label>
+                                        <select class="form-control" name="mail_cc[]" id="mail_cc" multiple="multiple" style="width: 220px;" required="" aria-required="true">
+                                            <option value="team.admin&amp;transport@mattsenkumar.com">Admin &amp; Transport Team</option>
+                                            <option value="leads.alaska@mattsenkumar.com">Alaska Leads</option>
+                                            <option value="leads.allconnect@mattsenkumar.com">Allconnect Leads</option>
+                                            <option value="analytics.team@mattsenkumar.com">Analytics Team</option>
+                                            <option value="barclays.ops@mattsenkumar.com">Barclays Ops Team</option>
+                                            <option value="BD.Team@mattsenkumar.com">BD Team</option>
+                                            <option value="big.nexidia@mattsenkumar.com">BIG Nexidia Team</option>
+                                            <option value="CAG.Leads@mattsenkumar.com">CAG Leads</option>
+                                            <option value="development@mattsenkumar.com">Development Team</option>
+                                            <option value="drcops@mattsenkumar.com">DRC Ops</option>
+                                            <option value="employee.relations@mattsenkumar.com">Employee Relations</option>
+                                            <option value="exit@mattsenkumar.com">Exit</option>
+                                            <option value="expedia.leadsops@mattsenkumar.com">Expedia Leads OPS</option>
+                                            <option value="FinanceIndiaTeam@mattsenkumar.com">Finance India Team</option>
+                                            <option value="team.guidedivr@mattsenkumar.com">Guided IVR team</option>
+                                            <option value="Harris&amp;Harris@mattsenkumar.com">Harris&amp;Harris</option>
+                                            <option value="hire.requisition@mattsenkumar.com">Hire Requisition</option>
+                                            <option value="team.hp@mattsenkumar.com">HP Team</option>
+                                            <option value="hqit.itsd@mattsenkumar.com">HQ IT Service Desk Team</option>
+                                            <option value="hr-ops@mattsenkumar.com">HR OPs</option>
+                                            <option value="kaplan.leads@mattsenkumar.com">Kaplan Leads</option>
+                                            <option value="marketing.team@mattsenkumar.com">Marketing Team</option>
+                                            <option value="movement@mattsenkumar.com">Movement</option>
+                                            <option value="ops.nexonamerica@mattsenkumar.com">Nexon America Ops</option>
+                                            <option value="leads.orkin@mattsenkumar.com">Orkin Leads</option>
+                                            <option value="pcf.ops@mattsenkumar.com">PCF Ops</option>
+                                            <option value="leads.premierfarnell@mattsenkumar.com">Premier Farnell Leads</option>
+                                            <option value="Team.Rogers@mattsenkumar.com">Rogers Team </option>
+                                            <option value="Team.Exelon@mattsenkumar.com">Team Exelon</option>
+                                            <option value="transport@mattsenkumar.com">Transport</option>
+                                            <option value="UAC.OPS@mattsenkumar.com">UAC OPS</option>
+                                            <option value="UNUMLeads@mattsenkumar.com">UNUM Leads</option>
+                                            <option value="Virginmedia.Leads@mattsenkumar.com">Virginmedia Leads</option>
+                                            <option value="leads.vonage@mattsenkumar.com">Vonage Leads</option>
+                                            <option value="Warning@mattsenkumar.com">Warning</option>
+                                            <option value="Flipkart_Opsleads@mattsenkumar.com">Flipkart OPs Leads</option>
+                                            <option value="mk.corporatetraining@mattsenkumar.com">MK Corporate Training</option>
+                                            <option value="Team.Recruitment@mattsenkumar.com">Team Recruitment</option>
+                                            <option value="MK360@mattsenkumar.com">MK 360</option>
+                                            <option value="mk.commandcenter@mattsenkumar.com">MK Command Center</option>
+                                            <option value="mk.laurelsteam@mattsenkumar.com">MK Laurels Team</option>
+                                            <option value="mk.munchers@mattsenkumar.com">MK Munchers</option>
+                                            <option value="mksparsh.team@mattsenkumar.com">MK Sparsh Team</option>
+                                            <option value="jpr.creativeenergy@mattsenkumar.com">Jaipur Creative Energy</option>
+                                            <option value="creativeenergycommittee@mattsenkumar.com">Creative Energy Committee</option>
+                                            <option value="corporate.communicationteam@mattsenkumar.com">Corporate Communication Team</option>
+                                            <option value="transport.team@mattsenkumar.com">Admin &amp; Transport Team</option>
+                                            <option value="admin.team@mattsenkumar.com">Admin Team</option>
+                                            <option value="info@mattsenkumar.com">Info</option>
+                                            <option value="mkbdteam@mattsenkumar.com">MK BD Team</option>
+                                            <option value="Implementation.Team@mattsenkumar.com">Implementation Team</option>
+                                            <option value="Dev.Sales@mattsenkumar.com">Dev Sales</option>
+                                            <option value="Dev.Support@mattsenkumar.com">Dev Support</option>
+                                            <option value="inventory.team@mattsenkumar.com">Inventory Team</option>
+                                            <option value="itteam.servicedelivery@mattsenkumar.com">IT Team Service Delivery</option>
+                                            <option value="ITTesting@mattsenkumar.com">IT Testing</option>
+                                            <option value="jaipurit.team@mattsenkumar.com">Jaipur IT Team</option>
+                                            <option value="MKIT.EAG@mattsenkumar.com">MK EAG Team</option>
+                                            <option value="MKIT.Infosec@mattsenkumar.com">MK Information Security Team</option>
+                                            <option value="MKITTeam@mattsenkumar.com">MK IT Team</option>
+                                            <option value="MKIT.ITSD@mattsenkumar.com">MK ITSD Team</option>
+                                            <option value="MKIT.NMG@mattsenkumar.com">MK NMG Team</option>
+                                            <option value="MKIT.SMG@mattsenkumar.com">MK SMG Team</option>
+                                            <option value="MKIT.WMG@mattsenkumar.com">MK WMG Team</option>
+                                            <option value="sales@mattsenkumar.com">Sales</option>
+                                            <option value="smartspeech@mattsenkumar.com">SmartSpeech</option>
+                                            <option value="hr.lead@mattsenkumar.com">HR Lead</option>
+                                            <option value="narayan.polai@mattsenkumar.net">Testing</option>
+                                            <option value="Others">Others</option> </select>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label><span class="must" style="color: red">*</span>Location</label>
+                                        <select class="form-control" name="location" id="location" style="width:220px;height: auto!important;" required="" aria-required="true"><option value="">--Select Location--</option><option value="New Delhi">New Delhi</option><option value="Gurugram">Gurugram</option><option value="Jaipur">Jaipur</option><option value="Coimbatore">Coimbatore</option><option value="Bengaluru">Bengaluru</option><option value="Noida">Noida</option></select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2"></div>  
+                            </div>                                      
+                    </div>                
+            </div>                       
+ 
+        <!-- End Qualification details --> 
+        <!-- Organization Hierarchy Details -->
+            <div class="box box-default">
+                
+                <div class="box-body">
+                   
+                    <div class="row">
+                        <div class="col-md-12 text-center ">
+                            <button class="btn btn-primary btn-lg" id="btn_add" name="btn_add">Submit</button>
+                        </div> 
+                    </div>              
+                </div> 
+                <div>
+                        <p>This system is for the use of authorized personnel only and by accessing this system you hereby consent to the system being monitored by the Company. Any unauthorized use will be considered a breach of the Company's Information Security policies and may also be unlawful under law. MattsenKumar reserves the right to take any action including disciplinary action or legal proceedings in a court of law against persons involved in the violation of the access restrictions herein. The Information Is 'Internal, Restricted'</p>
+                </div>                      
+            </div>
+        <!-- End Organization Hierarchy Details --> 
+        </div>
+        </form>
+    </section>
+    <!-- End Main content -->
+</div>
+  <!-- /.content-wrapper -->
+  <script>
+  $( document ).ready(function() 
+{
+    $('.clsHide').hide();
+    $('.imgLoad').hide();
+    $( ".monthpicker" ).datepicker();
+    $( ".monthpicker" ).datepicker( "option", "dateFormat","M-y");
+
+    $(".datepicker").datepicker({
+    	dateFormat:"yy-mm-dd",
+    	changeYear: true,
+    	changeMonth: true,
+    	maxDate: new Date()
+    });
+    
+
+	$(".timepicker").timepicker({timeFormat: 'HH:mm:ss'});
+
+	$('.zoomview').hover(function() {
+        $(this).addClass('transition');
+ 
+    }, function() {
+        $(this).removeClass('transition');
+    });
+    $( ".datepicker2" ).datepicker({ maxDate:0});
+	$( ".datepicker2" ).datepicker( "option", "dateFormat","yy-mm-dd");
+	 
+	$( ".datepicker3" ).datepicker({ minDate:-1});
+	$( ".datepicker3" ).datepicker( "option", "dateFormat","yy-mm-dd");
+   
+});
+multipl('verify_type');
+	multipl('mail_cc');
+	multipl('backfill1');
+
+    $("#verify_type").multiselect("refresh");
+	$("#forlang").multiselect("refresh");
+    $("#mail_cc").multiselect("refresh");
+    function multipl(i){
+	$('#'+i).multiselect({  includeSelectAllOption: true });
+}
+
+
+
+  </script>
+   

@@ -1,0 +1,85 @@
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>Update User <small>it all starts here</small></h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="#">User</a></li>
+      <li class="active">Update User</li>
+    </ol>
+  </section>
+  <section class="content">
+    <div class="box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Update User Details</h3>
+      </div>
+      <section class="content">
+       
+        <div class="col-md-6">
+          <!-- Default box -->
+          <% var str = JSON.stringify(data) %>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Location</th>
+                  <th>Age</th>
+                  <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%  Object.keys(data[0]).forEach(function(key){%>
+              <tr>
+                <td><%= data[0][key]['id'] %></td>
+                <td><%= data[0][key]['first_name'] %></td>
+                <td><%= data[0][key]['last_name'] %></td>
+                <td><%= data[0][key]['location'] %></td>
+                <td><%= data[0][key]['age'] %></td>
+                <td>
+                  <form action="/update" method="POST">
+                  <button class="btn btn-warning" id="btn_edit" name="btn_edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
+                  </form>
+                </td>
+                <td>
+                    <form action="/delete" method="POST">
+                      <button class="btn btn-danger" id="btn_update" name="btn_update"><i class="fa fa-remove" aria-hidden="true"></i>Delete</button>
+                    </form>
+                    </td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+            <form action="/add" method="POST">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label class="text-normal text-dark">First Name</label>
+                      <input type="text" class="form-control" placeholder="first name" required>
+                  </div>
+                  <div class="form-group">
+                      <label class="text-normal text-dark">last Name</label>
+                      <input type="text" class="form-control" placeholder="last name" required>
+                  </div>
+                  <div class="form-group">
+                      <label class="text-normal text-dark">Location</label>
+                      <input type="text" class="form-control" placeholder="location" required>
+                  </div>
+                  <div class="form-group">
+                      <label class="text-normal text-dark">Age</label>
+                      <input type="text" class="form-control" placeholder="age" required>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-primary" id="btn_add" name="btn_add">Submit</button>
+                  </div>
+              </div>
+            </form>
+        </div>    
+    
+    
+</section>
+    </div>
+  </section>
+</div>
+  <!-- /.content-wrapper -->

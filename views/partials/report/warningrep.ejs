@@ -1,0 +1,75 @@
+<div class="content-wrapper">
+        <section class="content-header">
+          <h1>Warning Report <small>it all starts here</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">User</a></li>
+            <li class="active">Warning Report</li>
+          </ol>
+        </section>
+        <div class="panel panel-primary">
+                <div class="panel-heading" style="text-align: center">Warning Report</div>
+                <!-- <div class="panel-body">Panel Content</div> -->
+              </div>
+        <section class="content">
+            <form method="POST" action="/newjoineerep">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class='col-sm-3'>
+                            <label>Start date</label>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker2'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-sm-3'>
+                                <label>End date</label>
+                                <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                        </div>
+                            <div class="col-md-3"></div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 align-items-center">
+                            <div class="form-group">
+                                    <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+      
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+        $(function () {
+            $('#datetimepicker2').datepicker({
+                format: "dd/mm/yyyy",
+                language: "es",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+    </script>
